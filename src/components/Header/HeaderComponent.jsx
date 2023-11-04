@@ -5,10 +5,7 @@ import './HeaderComponent.css';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  selectAuthenticated,
-  selectUser
-} from '../../redux/authSelectors';
+import { selectAuthenticated, selectUser } from '../../redux/authSelectors';
 import { logOut } from '../../redux/authReducer';
 import { dellToken } from '../../services/authAPI';
 
@@ -16,25 +13,24 @@ const HeaderComponent = () => {
   const authenticated = useSelector(selectAuthenticated);
   const userData = useSelector(selectUser);
   const dispatch = useDispatch();
-  
+
   const handleLogOut = () => {
     dispatch(logOut());
     dellToken();
   };
-  
+
   return (
     <header className="containerHeader">
       {authenticated ? (
         <div className="container">
-          <div>
-            <NavLink className="text" to="contacts">
-              ContactsBook
-            </NavLink>
-          </div>
+          <NavLink className="text" to="contacts">
+            ContactsBook
+          </NavLink>
+
           <div className="AuthContainer">
             <NavLink className="text2">{userData.name}</NavLink>
             <button className="btn" type="submit" onClick={handleLogOut}>
-              <ExitToAppIcon  color="primary" fontSize="large"  />
+              <ExitToAppIcon color="primary" fontSize="large" />
             </button>
           </div>
         </div>

@@ -2,16 +2,14 @@
     position: fixed;
     width: 100%;
     max-width: 1000px;
-    
+    z-index: 99;
     
 }
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center; 
     padding: 15px;
     border-bottom:  1px solid white;
-    background: #3a3939;
     height: 50px;
 }
 
