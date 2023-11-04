@@ -15,8 +15,8 @@ const ContactForm = () => {
     const phoneInput = event.currentTarget.elements.phone.value;
 
     const isThereSuchUser = contacts.some(
-      ({ name, phone }) =>
-        name.toLowerCase() === nameInput.toLowerCase() && phone === phoneInput
+      ({ name, number }) =>
+        name.toLowerCase() === nameInput.toLowerCase() && number === phoneInput
     );
 
     if (isThereSuchUser) {
