@@ -35,12 +35,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className='conteinerContactForm'>
       <form className="contactForm" onSubmit={handleAddContact}>
         <label>
           <p className="textLabel">Name</p>
           <input
-            className="inputName"
+            className="input"
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -52,7 +52,7 @@ const ContactForm = () => {
         <label>
           <p className="textLabel">Number</p>
           <input
-            className="inputTel"
+            className="input"
             type="tel"
             name="phone"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

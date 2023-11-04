@@ -38,8 +38,8 @@ const ContactList = () => {
   return (
     <div className="conteinerContactList">
       {isLoading && <h3>Loading...</h3>}
-      {error &&  {error}}
-      
+      {error && { error }}
+
       <ul className="contactList">
         {selectedContacts &&
           selectedContacts.map(contact => (
@@ -54,7 +54,7 @@ const ContactList = () => {
                 name={contact.id}
                 onClick={handleSubmit}
               >
-                delete
+                ❌
               </button>
             </li>
           ))}

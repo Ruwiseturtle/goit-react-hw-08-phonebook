@@ -2,21 +2,18 @@
     display: block;
     width: 500px;
     margin-left: auto;
-    margin-right: auto;
+    /* margin-right: auto; */
     margin-bottom: 30px;
     padding-top: 110px;
     color: white;
+    font-size: 40px;
 }
 
-.titleContacts{
-      display: block;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    color: white;
-}
+
 .containerContacts{
     background-color: #3a3939;
+}
+
+.conteinerContactForm{
+    position: fixed;
 }

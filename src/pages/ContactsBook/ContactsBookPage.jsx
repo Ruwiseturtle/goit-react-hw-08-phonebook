@@ -15,10 +15,9 @@ const ContactsBookPage = () => {
   }, [dispatch]);
 
   return (
-    <div className="containerContacts">
-      <h1 className="title">Phonebook</h1>
+    <div className="containerContacts">    
+      <h1 className="title">My contacts</h1>      
       <ContactForm />
-      <h2 className="titleContacts">Contacts</h2>
       <Filter />
       <ContactList />
     </div>

@@ -11,10 +11,10 @@ const Filter = () => {
 
   return (
     <div className="containerFilter">
-      <label>
+      <label className='labelFilter'>
         <p className="textLabel">Find contacts by name</p>
         <input
-          className="inputTel"
+          className="inputFilter"
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
