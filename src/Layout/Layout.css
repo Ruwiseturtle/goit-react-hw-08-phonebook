@@ -1,0 +1,7 @@
+.containerMain{
+    display:block;
+    align-items:center;
+    justify-content:center;
+    margin-left: calc((100% - 1000px)/2);
+    margin-right: calc((100% - 1000px)/2);
+}

@@ -41,8 +41,8 @@ const HeaderComponent = () => {
       ) : (
         <div className="container">
           <div>
-            <NavLink className="text2" to="/login">
-              BOOK OF CONTACTS
+            <NavLink className="text2" to="/">
+              Home
             </NavLink>
           </div>
           <div className="AuthContainer">

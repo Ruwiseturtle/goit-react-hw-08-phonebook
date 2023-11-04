@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy, useEffect } from 'react';
 import { refreshThunk } from '../redux/authReducer';
 import Layout from '../Layout/Layout';
@@ -9,13 +9,12 @@ import RestictedRoute from '../components/RestictedRoute/RestictedRoute';
 const ContactsBookPage = lazy(() => import('../pages/ContactsBook/ContactsBookPage'));
 const LoginPage = lazy(() => import('../pages/Login/LoginPage'));
 const RegisterPage = lazy(() => import('../pages/Register/RegisterPage'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 
 const App = () => {  
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    navigate('/login', { replace: true });
     dispatch(refreshThunk());
   }, [dispatch]);
 
@@ -24,8 +23,9 @@ const App = () => {
       <Suspense fallback={'Loading.....'}>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
             <Route path="login" element={<LoginPage />} />
-           <Route
+            <Route
               path="register"
               element={
                 <RestictedRoute>

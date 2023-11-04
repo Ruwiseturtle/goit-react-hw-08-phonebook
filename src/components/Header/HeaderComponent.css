@@ -2,7 +2,8 @@
     position: fixed;
     width: 100%;
     max-width: 1000px;
-    margin-left: calc((100% - 1000px)/2);
+    
+    
 }
 .container{
     display: flex;
@@ -39,7 +40,11 @@ background-color: #1c6b7b;
 .text2{
     color: white;
     text-decoration: none;
-    font-size: 25px;    
+    font-size: 30px;    
+}
+.text2:focus,
+.text2:active {
+  color: #1a93ac;
 }
 
 .btn{
