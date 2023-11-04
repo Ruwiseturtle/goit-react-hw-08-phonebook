@@ -2,7 +2,8 @@
   position: relative;
   width: 100%; 
   height: calc(100vh - 185px);
-  top: 85px;
+ 
+  top: 80px;
   padding-top: 100px;
 
   background-image: url('../../pictures/notepad-1130743_1280.jpg');
@@ -16,4 +17,5 @@
   text-align: center;
   font-size: 30px;
   color: white;
+  padding: 0 50px 0 50px;
 }
