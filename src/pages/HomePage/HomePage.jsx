@@ -4,7 +4,7 @@ import  './HomePage.css';
 const HomePage = () => {
   return (
     <div className='containerHomePage'>
-      <div  >
+      <div>
         <p className="textHome">
                   Welcome to the CONTACT BOOK website!
                   Here is you can save the phone
