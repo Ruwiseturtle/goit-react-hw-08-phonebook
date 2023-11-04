@@ -52,7 +52,7 @@ const RegisterForm = () => {
               autoComplete="on"
             />
           </label>
-          <button className="loginBtn" type="submit">
+          <button className="loginBtn" type="submit" onClick={handleSubmit}>
             sign up
           </button>
         </form>
