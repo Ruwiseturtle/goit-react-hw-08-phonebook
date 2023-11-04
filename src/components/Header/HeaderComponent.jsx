@@ -1,0 +1,63 @@
+import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import './HeaderComponent.css';
+
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  selectAuthenticated,
+  selectUser
+} from '../../redux/authSelectors';
+import { logOut } from '../../redux/authReducer';
+import { dellToken } from '../../services/authAPI';
+
+const HeaderComponent = () => {
+  const authenticated = useSelector(selectAuthenticated);
+  const userData = useSelector(selectUser);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  
+  const handleLogOut = () => {
+    dispatch(logOut());
+    dellToken();
+  };
+  
+  return (
+    <header className="containerHeader">
+      {authenticated ? (
+        <div className="container">
+          <div>
+            <NavLink className="text" to="contacts">
+              ContactsBook
+            </NavLink>
+          </div>
+          <div className="AuthContainer">
+            <NavLink className="text2">{userData.name}</NavLink>
+            <button className="btn" type="submit" onClick={handleLogOut}>
+              <ExitToAppIcon  color="primary" fontSize="large"  />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="container">
+          <div>
+            <NavLink className="text2" to="/login">
+              BOOK OF CONTACTS
+            </NavLink>
+          </div>
+          <div className="AuthContainer">
+            <NavLink className="text" to="/login">
+              Login
+            </NavLink>
+            <NavLink className="text" to="/register">
+              Sign up
+            </NavLink>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default HeaderComponent;
