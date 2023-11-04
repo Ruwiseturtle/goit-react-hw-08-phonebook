@@ -4,7 +4,6 @@ import {
   requestDeleteContact,
   requestAddContact,
 } from '../services/authAPI';
-import { PhotoSizeSelectLargeTwoTone } from '@mui/icons-material';
 
 //санка для отримання усіх контактів
 export const getRequestContacts = createAsyncThunk(

@@ -22,9 +22,9 @@ const ContactList = () => {
       return contacts;
     } else {
       return contacts.filter(
-        ({ name, phone }) =>
+        ({ name, number }) =>
           name.toLowerCase().includes(filter.toLowerCase()) ||
-          phone.split('-').join('').includes(filter)
+          number.split('-').join('').includes(filter)
       );
     }
   }
@@ -47,11 +47,11 @@ const ContactList = () => {
         {selectedContacts &&
           selectedContacts.map(contact => (
             <li
-              key={`${contact.name}_${contact.phone}`}
+              key={`${contact.name}_${contact.number}`}
               className="contactInfo"
             >
               <p className="contactName">{contact.name}: </p>
-              <p className="contactPhone"> {contact.phone}</p>
+              <p className="contactPhone"> {contact.number}</p>
               <button
                 className="btnContact"
                 name={contact.id}
