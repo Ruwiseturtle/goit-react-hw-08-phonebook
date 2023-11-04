@@ -24,7 +24,7 @@ const HeaderComponent = () => {
       {authenticated ? (
         <div className="container">
           <NavLink className="text" to="contacts">
-            ContactsBook
+            CONTACT BOOK
           </NavLink>
 
           <div className="AuthContainer">
