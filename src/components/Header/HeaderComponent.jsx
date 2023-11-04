@@ -42,10 +42,10 @@ const HeaderComponent = () => {
             </NavLink>
           </div>
           <div className="AuthContainer">
-            <NavLink className="text" to="/login">
+            <NavLink className="textLogin" to="/login">
               Login
             </NavLink>
-            <NavLink className="text" to="/register">
+            <NavLink className="textSignUp" to="/register">
               Sign up
             </NavLink>
           </div>
