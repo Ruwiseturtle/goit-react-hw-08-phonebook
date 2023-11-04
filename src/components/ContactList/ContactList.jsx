@@ -38,7 +38,11 @@ const ContactList = () => {
   return (
     <div className="conteinerContactList">
       {isLoading && <h3>Loading...</h3>}
-      {error && <p>{error}</p>}
+      {error && (
+        <p className="errorText">
+          there are no contacts in your book yet. You can add them :)
+        </p>
+      )}
       <ul className="contactList">
         {selectedContacts &&
           selectedContacts.map(contact => (

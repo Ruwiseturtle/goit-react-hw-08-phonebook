@@ -27,9 +27,9 @@ const ContactForm = () => {
 
     const newContact = {
       name: nameInput,
-      phone: phoneInput,
+      number: phoneInput,
     };
-
+   
     dispatch(addRequestContact(newContact));
     event.currentTarget.reset();
   };

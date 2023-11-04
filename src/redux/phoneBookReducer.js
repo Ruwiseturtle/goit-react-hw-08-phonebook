@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {
-  requestGetContacts,
-  requestDeleteContactId,
-  requestPOSTContacts,
-} from '../services/API';
+  requestAllContacts,
+  requestDeleteContact,
+  requestAddContact,
+} from '../services/authAPI';
+import { PhotoSizeSelectLargeTwoTone } from '@mui/icons-material';
 
 //санка для отримання усіх контактів
 export const getRequestContacts = createAsyncThunk(
   'contacts/get',
   async (_, thunkAPI) => {
     try {
-      const contactsData = await requestGetContacts();
+      const contactsData = await requestAllContacts();
       return contactsData; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -23,7 +24,7 @@ export const deleteRequestContact = createAsyncThunk(
   'contacts/delete',
   async (id, thunkAPI) => {
     try {
-      const contactId = await requestDeleteContactId(id);
+      const contactId = await requestDeleteContact(id);
       return contactId; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -34,8 +35,10 @@ export const deleteRequestContact = createAsyncThunk(
 export const addRequestContact = createAsyncThunk(
   'contacts/add',
   async (newContact, thunkAPI) => {
+     
     try {
-      const contact = await requestPOSTContacts(newContact);
+      const contact = await requestAddContact(newContact);
+      
       return contact; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

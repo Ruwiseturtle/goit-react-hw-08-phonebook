@@ -17,15 +17,15 @@ const App = () => {
   useEffect(() => {
     navigate('/login', { replace: true });
     dispatch(refreshThunk());
-  }, [dispatch]);
+  }, []);
 
   return (
     <>
-    
       <Suspense fallback={'Loading.....'}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route
+            <Route path="login" element={<LoginPage />} />
+           <Route
               path="register"
               element={
                 <RestictedRoute>
@@ -33,7 +33,7 @@ const App = () => {
                 </RestictedRoute>
               }
             />
-            <Route path="login" element={<LoginPage />} />
+
             <Route
               path="contacts"
               element={

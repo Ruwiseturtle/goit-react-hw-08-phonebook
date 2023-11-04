@@ -39,3 +39,8 @@
 .btnContact{
     max-height: 20px;
 }
+
+.errorText{
+    color: white;
+    font-size: 30px;
+}

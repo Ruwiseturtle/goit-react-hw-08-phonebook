@@ -16,8 +16,7 @@ const RegisterForm = () => {
     };
 
     dispatch(registerThunk(newUser));
-    console.log('проверка');
-    console.log(event.currentTarget.elements.name.value);
+    
     event.currentTarget.elements.name.value = '';
     event.currentTarget.elements.email.value = '';
     event.currentTarget.elements.password.value = '';

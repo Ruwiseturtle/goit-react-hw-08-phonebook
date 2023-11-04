@@ -17,7 +17,6 @@ export const loginThunk = createAsyncThunk(
       const response = await requestLogin(formData);
       return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
-      console.log(error);
       Notify.failure(error.code);
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -31,6 +30,7 @@ export const registerThunk = createAsyncThunk(
    
     try {
       const authData = await requestRegister(formData);
+      console.log(authData);
       return authData; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       Notify.failure('Enter the correct data in the form!');
