@@ -15,7 +15,6 @@ import { dellToken } from '../../services/authAPI';
 const HeaderComponent = () => {
   const authenticated = useSelector(selectAuthenticated);
   const userData = useSelector(selectUser);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   
   const handleLogOut = () => {

@@ -8,8 +8,6 @@ import {
   selectContactError,
   selectContactFilter,
 } from '../../redux/contacts.selectors';
-import { ChakraProvider } from '@chakra-ui/react';
-import DeleteIcon from '@mui/icons-material/Delete';
 
 const ContactList = () => {
   const dispatch = useDispatch();
