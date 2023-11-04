@@ -11,9 +11,9 @@ const Authentication = () => {
   
   useEffect(() => {
     if (authenticated) {
-       navigate("/contacts");
-     }
-   }, [authenticated]);
+      navigate('/contacts');
+    }
+  }, [authenticated, navigate]);
   
   
 

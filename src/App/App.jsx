@@ -15,9 +15,9 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-   navigate('/login', { replace: true });
-   dispatch(refreshThunk());
- }, [dispatch]);
+    navigate('/login', { replace: true });
+    dispatch(refreshThunk());
+  }, [dispatch, navigate]);
 
   return (
     <>
