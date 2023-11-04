@@ -1,6 +1,8 @@
 .containerHeader{
     position: fixed;
     width: 100%;
+    max-width: 1000px;
+    margin-left: calc((100% - 1000px)/2);
 }
 .container{
     display: flex;
