@@ -1,6 +1,5 @@
-.boxForm{
+.boxForm1{
     position: relative;
-    top: calc(100vh/4);
     display: block;
     max-width: 500px;
     margin-left: auto;

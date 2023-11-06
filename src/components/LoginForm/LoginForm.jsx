@@ -18,7 +18,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="boxForm">
+    <div className="boxForm1">
       <form className="loginForm" onSubmit={handleSubmit}>
         <label htmlFor="email">
           <span className="labelText"> email</span>

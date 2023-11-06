@@ -1,17 +1,32 @@
-.title{
-    display: block;
-    width: 500px;
-    margin-left: auto;
-    padding-top: 110px;
-    color: white;
-    font-size: 40px;
-}
-
-
 .containerContacts{
+    position: relative;
+    display: block;
     background-color: #3a3939;
+    padding-top: 80px;
+    width: 100%;
+    max-width: 1300px;
 }
 
-.conteinerContactForm{
-    position: fixed;
+
+.boxTitle{
+    display: block;
+    color: white;
+    /* font-size: 40px; */
+}
+
+.boxForm{
+   position: fixed;
+   padding-top: 30px;
+   background-color: #3a3939;
+   width: 100%;
+   max-width: 1300px;
+}
+.boxContacts{
+    padding-top: 270px;
+}
+
+@media screen and (max-width: 1100px) {
+  .boxContacts {
+  padding-top: 400px;
+  }
 }

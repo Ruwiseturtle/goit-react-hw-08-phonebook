@@ -15,11 +15,17 @@ const ContactsBookPage = () => {
   }, [dispatch]);
 
   return (
-    <div className="containerContacts">    
-      <h1 className="title">My contacts</h1>      
-      <ContactForm />
-      <Filter />
-      <ContactList />
+    <div className="containerContacts">
+      {/* <div className="boxTitle">
+        <h1>My contacts</h1>
+      </div> */}
+      <div className="boxForm">
+        <ContactForm />
+        <Filter />
+      </div>
+      <div className="boxContacts">
+        <ContactList />
+      </div>
     </div>
   );
 };

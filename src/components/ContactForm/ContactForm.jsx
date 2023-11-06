@@ -35,9 +35,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='conteinerContactForm'>
+    <div className="conteinerContactForm">
       <form className="contactForm" onSubmit={handleAddContact}>
-        <label>
+        <label className="labelInput">
           <p className="textLabel">Name</p>
           <input
             className="input"
@@ -49,7 +49,7 @@ const ContactForm = () => {
           />
         </label>
 
-        <label>
+        <label className="labelInput">
           <p className="textLabel">Number</p>
           <input
             className="input"
