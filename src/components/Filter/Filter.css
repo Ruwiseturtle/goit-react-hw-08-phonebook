@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1100px) {
   .containerFilter {
-  width: calc(100% - 20%);
+  width: calc(100% - 0%);
   }
 }
 
