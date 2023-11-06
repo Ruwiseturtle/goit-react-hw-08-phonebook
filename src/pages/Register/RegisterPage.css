@@ -3,7 +3,7 @@
   width: 100%; 
   height: calc(100vh - 185px);
  
-  top: 80px;
+  top: calc(100vh - 90vh);
   padding-top: 100px;
 
   background-image: url('../../pictures/notepad-1130743_1280.jpg');
