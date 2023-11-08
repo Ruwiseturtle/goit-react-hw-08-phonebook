@@ -25,6 +25,13 @@
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 1300px) {
+  .textHome {
+     font-size: 15px;
+  }
+}
+
+
 .textTitle{
     color: white;
     text-align: center;
@@ -32,4 +39,10 @@
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 1300px) {
+  .textTitle {
+     font-size: 25px;
+  }
 }

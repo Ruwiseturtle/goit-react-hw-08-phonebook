@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './HeaderComponent.css';
+// import { GiClosedDoors } from 'react-icons/gi';
 
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
@@ -30,6 +31,7 @@ const HeaderComponent = () => {
           <div className="AuthContainer">
             <NavLink className="text2">{userData.name}</NavLink>
             <button className="btn" type="submit" onClick={handleLogOut}>
+              {/* <GiClosedDoors size={40}/> */}
               <ExitToAppIcon color="primary" fontSize="large" />
             </button>
           </div>
